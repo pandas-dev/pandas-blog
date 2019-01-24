@@ -79,8 +79,12 @@ github: publish
 	git push origin $(GITHUB_PAGES_BRANCH)
 
 dependencies:
-	pip install pelican markdown
+	pip install pelican markdown ghp-import
 	git clone https://github.com/laughk/pelican-hss
 
+patch: pelican-hss
+	# Fixes a TypeError when publishing. Need to make a PR if we want this
+	# theme.
+	git -C pelican-hss apply ../pelican-hss.patch
 
 .PHONY: html help clean regenerate serve serve-global devserver stopserver publish github dependencies
