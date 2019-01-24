@@ -2,9 +2,9 @@ Title: Pandas Extension Arrays
 Date: 2019-01-04
 
 Extensibility was a major theme in pandas development over the last couple of
-releases. This post introduces the extension array interface: the motivation
-behind it and how it might affect you as a pandas user. Finally, we look at how
-extension arrays may shape the future of pandas.
+releases. This post introduces the pandas extension array interface: the
+motivation behind it and how it might affect you as a pandas user. Finally, we
+look at how extension arrays may shape the future of pandas.
 
 Extension Arrays are just one of the changes in pandas 0.24.0. See the
 [whatsnew][whatsnew] for a full changelog.
