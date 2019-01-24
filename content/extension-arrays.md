@@ -6,6 +6,9 @@ releases. This post introduces the extension array interface: the motivation
 behind it and how it might affect you as a pandas user. Finally, we look at how
 extension arrays may shape the future of pandas.
 
+Extension Arrays are just one of the changes in pandas 0.24.0. See the
+[whatsnew][whatsnew] for a full changelog.
+
 ## The Motivation
 
 Pandas is built on top of NumPy. You could roughly define a Series as a wrapper
@@ -175,7 +178,7 @@ getting pandas out of the array business, and instead thinking about
 higher-level tabular data things, is a healthy development for the project.
 
 This dovetails perfectly with NumPy's [`__array_ufunc__`][ufunc] protocol and
-[NEP-18][nep-18]. You'll be able to use the familiar NumPy API on objects that
+[NEP-18][nep18]. You'll be able to use the familiar NumPy API on objects that
 aren't backed by NumPy memory.
 
 ## Upgrade
@@ -203,9 +206,10 @@ partners][partners] involved in the pandas community.
 [fletcher]: https://github.com/xhochy/fletcher
 [arrow]: https://arrow.apache.org
 [ufunc]: https://docs.scipy.org/doc/numpy-1.13.0/neps/ufunc-overrides.html
-[nep-18]: https://www.numpy.org/neps/nep-0018-array-function-protocol.html
+[nep18]: https://www.numpy.org/neps/nep-0018-array-function-protocol.html
 [ml]: https://mail.python.org/mailman/listinfo/pandas-dev
 [twitter]: https://twitter.com/pandas_dev
 [tracker]: https://github.com/pandas-dev/pandas/issues
 [partners]: https://github.com/pandas-dev/pandas-governance/blob/master/people.md
 [eco]: http://pandas.pydata.org/pandas-docs/stable/ecosystem.html#extension-data-types
+[whatsnew]: http://pandas.pydata.org/pandas-docs/version/0.24.0rc1/whatsnew/v0.24.0.html
