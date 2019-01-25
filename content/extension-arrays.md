@@ -176,9 +176,9 @@ Apache Arrow array, a CuPy array) and place it inside a DataFrame. I think
 getting pandas out of the array business, and instead thinking about
 higher-level tabular data things, is a healthy development for the project.
 
-This fits together perfectly with NumPy's [`__array_ufunc__`][ufunc] protocol
-and [NEP-18][nep18]. You'll be able to use the familiar NumPy API on objects
-that aren't backed by NumPy memory.
+This works perfectly with NumPy's [`__array_ufunc__`][ufunc] protocol and
+[NEP-18][nep18]. You'll be able to use the familiar NumPy API on objects that
+aren't backed by NumPy memory.
 
 ## Upgrade
 
