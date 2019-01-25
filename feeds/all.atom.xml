@@ -144,10 +144,11 @@ array. But the entire point of an extension array is for representing data NumPy
 represents string data using Python objects in a NumPy array, which is slow.
 Libraries like &lt;a href="https://arrow.apache.org"&gt;Apache Arrow&lt;/a&gt; provide native support for variable-length
 strings, and the &lt;a href="https://github.com/xhochy/fletcher"&gt;Fletcher&lt;/a&gt; library provides pandas extension arrays
-for Arrow arrays. Pandas (or third-party libraries) will be able to support
-nested data, geo data, GPU arrays. Keep an eye on the &lt;a href="http://pandas.pydata.org/pandas-docs/stable/ecosystem.html#extension-data-types"&gt;pandas ecosystem&lt;/a&gt;
-page, which will keep track of third-party extension arrays. It's an exciting
-time for pandas development.&lt;/p&gt;
+for Arrow arrays. It will allow &lt;a href="https://github.com/geopandas/geopandas"&gt;GeoPandas&lt;/a&gt; to store geometry data
+more efficiently. Pandas (or third-party libraries) will be able to support
+nested data, data with units, geo data, GPU arrays. Keep an eye on the
+&lt;a href="http://pandas.pydata.org/pandas-docs/stable/ecosystem.html#extension-data-types"&gt;pandas ecosystem&lt;/a&gt; page, which will keep track of third-party extension
+arrays. It's an exciting time for pandas development.&lt;/p&gt;
 &lt;h2&gt;Other Thoughts&lt;/h2&gt;
 &lt;p&gt;I'd like to emphasize that this is an &lt;em&gt;interface&lt;/em&gt;, and not a concrete array
 implementation. We are &lt;em&gt;not&lt;/em&gt; reimplementing NumPy here in pandas. Rather, this
