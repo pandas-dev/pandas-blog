@@ -162,10 +162,11 @@ Extension Arrays open up quite a few exciting opportunities. Currently, pandas
 represents string data using Python objects in a NumPy array, which is slow.
 Libraries like [Apache Arrow][arrow] provide native support for variable-length
 strings, and the [Fletcher][fletcher] library provides pandas extension arrays
-for Arrow arrays. Pandas (or third-party libraries) will be able to support
-nested data, geo data, GPU arrays. Keep an eye on the [pandas ecosystem][eco]
-page, which will keep track of third-party extension arrays. It's an exciting
-time for pandas development.
+for Arrow arrays. It will allow [GeoPandas][geopandas] to store geometry data
+more efficiently. Pandas (or third-party libraries) will be able to support
+nested data, data with units, geo data, GPU arrays. Keep an eye on the
+[pandas ecosystem][eco] page, which will keep track of third-party extension
+arrays. It's an exciting time for pandas development.
 
 ## Other Thoughts
 
@@ -212,3 +213,4 @@ partners][partners] involved in the pandas community.
 [partners]: https://github.com/pandas-dev/pandas-governance/blob/master/people.md
 [eco]: http://pandas.pydata.org/pandas-docs/stable/ecosystem.html#extension-data-types
 [whatsnew]: http://pandas.pydata.org/pandas-docs/version/0.24/whatsnew/v0.24.0.html
+[geopandas]: https://github.com/geopandas/geopandas
