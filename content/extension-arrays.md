@@ -130,12 +130,12 @@ conversions) stem from trying to shoehorn these extension arrays into a NumPy
 array. But the entire point of an extension array is for representing data NumPy
 *can't* natively represent.
 
-To solve the `.values` problem, we've split it's roles into two dedicated methods:
+To solve the `.values` problem, we've split its roles into two dedicated methods:
 
 1. Use `.array` to get a zero-copy reference to the underlying data
 2. Use `.to_numpy()` to get a (potentially expensive, lossy) NumPy array of the
    data.
-  
+
 So with our Categorical example,
 
 ```python
@@ -146,7 +146,6 @@ Categories (3, object): [a, b, c]
 >>> ser.to_numpy()
 array(['a', 'b', 'a'], dtype=object)
 ```
-  
 
 To summarize:
 
@@ -177,9 +176,9 @@ Apache Arrow array, a CuPy array) and place it inside a DataFrame. I think
 getting pandas out of the array business, and instead thinking about
 higher-level tabular data things, is a healthy development for the project.
 
-This dovetails perfectly with NumPy's [`__array_ufunc__`][ufunc] protocol and
-[NEP-18][nep18]. You'll be able to use the familiar NumPy API on objects that
-aren't backed by NumPy memory.
+This fits together perfectly with NumPy's [`__array_ufunc__`][ufunc] protocol
+and [NEP-18][nep18]. You'll be able to use the familiar NumPy API on objects
+that aren't backed by NumPy memory.
 
 ## Upgrade
 
@@ -202,7 +201,7 @@ partners][partners] involved in the pandas community.
 
 [IPArray]: https://github.com/pandas-dev/pandas/issues/18767
 [cyberpandas]: https://cyberpandas.readthedocs.io
-[IntegerArray]: http://pandas.pydata.org/pandas-docs/version/0.24/api/generated/pandas.arrays.IntegerArray.html#pandas.arrays.IntegerArray
+[IntegerArray]: http://pandas.pydata.org/pandas-docs/version/0.24/reference/api/pandas.arrays.IntegerArray.html
 [fletcher]: https://github.com/xhochy/fletcher
 [arrow]: https://arrow.apache.org
 [ufunc]: https://docs.scipy.org/doc/numpy-1.13.0/neps/ufunc-overrides.html
@@ -212,4 +211,4 @@ partners][partners] involved in the pandas community.
 [tracker]: https://github.com/pandas-dev/pandas/issues
 [partners]: https://github.com/pandas-dev/pandas-governance/blob/master/people.md
 [eco]: http://pandas.pydata.org/pandas-docs/stable/ecosystem.html#extension-data-types
-[whatsnew]: http://pandas.pydata.org/pandas-docs/version/0.24.0rc1/whatsnew/v0.24.0.html
+[whatsnew]: http://pandas.pydata.org/pandas-docs/version/0.24/whatsnew/v0.24.0.html
