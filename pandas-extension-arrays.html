@@ -50,7 +50,177 @@
     </p>
   </div>
   <div class="article__text">
-    
+    <p>Extensibility was a major theme in pandas development over the last couple of
+releases. This post introduces the pandas extension array interface: the
+motivation behind it and how it might affect you as a pandas user. Finally, we
+look at how extension arrays may shape the future of pandas.</p>
+<p>Extension Arrays are just one of the changes in pandas 0.24.0. See the
+<a href="http://pandas.pydata.org/pandas-docs/version/0.24/whatsnew/v0.24.0.html">whatsnew</a> for a full changelog.</p>
+<h2>The Motivation</h2>
+<p>Pandas is built on top of NumPy. You could roughly define a Series as a wrapper
+around a NumPy array, and a DataFrame as a collection of Series with a shared
+index. That's not entirely correct for several reasons, but I want to focus on
+the "wrapper around a NumPy array" part. It'd be more correct to say "wrapper
+around an array-like object".</p>
+<p>Pandas mostly uses NumPy's builtin data representation; we've restricted it in
+places and extended it in others. For example, pandas' early users cared greatly
+about timezone-aware datetimes, which NumPy doesn't support. So pandas
+internally defined a <code>DatetimeTZ</code> dtype (which mimics a NumPy dtype), and
+allowed you to use that dtype in <code>Index</code>, <code>Series</code>, and as a column in a
+<code>DataFrame</code>. That dtype carried around the tzinfo, but wasn't itself a valid
+NumPy dtype.</p>
+<p>As another example, consider <code>Categorical</code>. This actually composes <em>two</em> arrays:
+one for the <code>categories</code> and one for the <code>codes</code>. But it can be stored in a
+<code>DataFrame</code> like any other column.</p>
+<p>Each of these extension types pandas added is useful on its own, but carries a
+high maintenance cost. Large sections of the codebase need to be aware of how to
+handle a NumPy array or one of these other kinds of special arrays. This made
+adding new extension types to pandas very difficult.</p>
+<p>Anaconda, Inc. had a client who regularly dealt with datasets with IP addresses.
+They wondered if it made sense to add an <a href="https://github.com/pandas-dev/pandas/issues/18767">IPArray</a> to pandas. In the
+end, we didn't think it passed the cost-benefit test for inclusion in pandas
+<em>itself</em>, but we were interested in defining an interface for third-party
+extensions to pandas. Any object implementing this interface would be allowed in
+pandas. I was able to write <a href="https://cyberpandas.readthedocs.io">cyberpandas</a> outside of pandas, but it
+feels like using any other dtype built into pandas.</p>
+<h2>The Current State</h2>
+<p>As of pandas 0.24.0, all of pandas' internal extension arrays (Categorical,
+Datetime with Timezone, Period, Interval, and Sparse) are now built on top of
+the ExtensionArray interface. Users shouldn't notice many changes. The main
+thing you'll notice is that things are cast to <code>object</code> dtype in fewer places,
+meaning your code will run faster and your types will be more stable. This
+includes storing <code>Period</code> and <code>Interval</code> data in <code>Series</code> (which were previously
+cast to object dtype).</p>
+<p>Additionally, we'll be able to add <em>new</em> extension arrays with relative ease.
+For example, 0.24.0 (optionally) solved one of pandas longest-standing pain
+points: missing values casting integer-dtype values to float.</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">int_ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">int_ser</span>
+<span class="mi">0</span>    <span class="mi">1</span>
+<span class="mi">2</span>    <span class="mi">2</span>
+<span class="n">dtype</span><span class="p">:</span> <span class="n">int64</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">int_ser</span><span class="o">.</span><span class="n">reindex</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="mi">0</span>    <span class="mf">1.0</span>
+<span class="mi">1</span>    <span class="n">NaN</span>
+<span class="mi">2</span>    <span class="mf">2.0</span>
+<span class="n">dtype</span><span class="p">:</span> <span class="n">float64</span>
+</pre></div>
+
+
+<p>With the new <a href="http://pandas.pydata.org/pandas-docs/version/0.24/reference/api/pandas.arrays.IntegerArray.html">IntegerArray</a> and nullable integer dtypes, we can
+natively represent integer data with missing values.</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">int_ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">index</span><span class="o">=</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">Int64Dtype</span><span class="p">())</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">int_ser</span>
+<span class="mi">0</span>    <span class="mi">1</span>
+<span class="mi">2</span>    <span class="mi">2</span>
+<span class="n">dtype</span><span class="p">:</span> <span class="n">Int64</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">int_ser</span><span class="o">.</span><span class="n">reindex</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<span class="mi">0</span>      <span class="mi">1</span>
+<span class="mi">1</span>    <span class="n">NaN</span>
+<span class="mi">2</span>      <span class="mi">2</span>
+<span class="n">dtype</span><span class="p">:</span> <span class="n">Int64</span>
+</pre></div>
+
+
+<p>One thing it does slightly change how you should access the raw (unlabeled)
+arrays stored inside a Series or Index, which is occasionally useful. Perhaps
+the method you're calling only works with NumPy arrays, or perhaps you want to
+disable automatic alignment.</p>
+<p>In the past, you'd hear things like "Use <code>.values</code> to extract the NumPy array
+from a Series or DataFrame." If it were a good resource, they'd tell you that's
+not <em>entirely</em> true, since there are some exceptions. I'd like to delve into
+those exceptions.</p>
+<p>The fundamental problem with <code>.values</code> is that it serves two purposes:</p>
+<ol>
+<li>Extracting the array backing a Series, Index, or DataFrame</li>
+<li>Converting the Series, Index, or DataFrame to a NumPy array</li>
+</ol>
+<p>As we saw above, the "array" backing a Series or Index might not be a NumPy
+array, it may instead be an extension array (from pandas or a third-party
+library). For example, consider <code>Categorical</code>,</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">cat</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Categorical</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">],</span> <span class="n">categories</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;c&#39;</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">ser</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">cat</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">ser</span>
+<span class="mi">0</span>    <span class="n">a</span>
+<span class="mi">1</span>    <span class="n">b</span>
+<span class="mi">2</span>    <span class="n">a</span>
+<span class="n">dtype</span><span class="p">:</span> <span class="n">category</span>
+<span class="n">Categories</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="nb">object</span><span class="p">):</span> <span class="p">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">]</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">ser</span><span class="o">.</span><span class="n">values</span>
+<span class="p">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">]</span>
+<span class="n">Categories</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="nb">object</span><span class="p">):</span> <span class="p">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">]</span>
+</pre></div>
+
+
+<p>In this case <code>.values</code> is a Categorical, not a NumPy array. For period-dtype
+data, <code>.values</code> returns a NumPy array of <code>Period</code> objects, which is expensive to
+create. For timezone-aware data, <code>.values</code> converts to UTC and <em>drops</em> the
+timezone info. These kind of surprises (different types, or expensive or lossy
+conversions) stem from trying to shoehorn these extension arrays into a NumPy
+array. But the entire point of an extension array is for representing data NumPy
+<em>can't</em> natively represent.</p>
+<p>To solve the <code>.values</code> problem, we've split its roles into two dedicated methods:</p>
+<ol>
+<li>Use <code>.array</code> to get a zero-copy reference to the underlying data</li>
+<li>Use <code>.to_numpy()</code> to get a (potentially expensive, lossy) NumPy array of the
+   data.</li>
+</ol>
+<p>So with our Categorical example,</p>
+<div class="highlight"><pre><span></span><span class="o">&gt;&gt;&gt;</span> <span class="n">ser</span><span class="o">.</span><span class="n">array</span>
+<span class="p">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">a</span><span class="p">]</span>
+<span class="n">Categories</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="nb">object</span><span class="p">):</span> <span class="p">[</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">]</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="n">ser</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="n">array</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">],</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">object</span><span class="p">)</span>
+</pre></div>
+
+
+<p>To summarize:</p>
+<ul>
+<li><code>.array</code> will <em>always</em> be a an ExtensionArray, and is always a zero-copy
+   reference back to the data.</li>
+<li><code>.to_numpy()</code> is <em>always</em> a NumPy array, so you can reliably call
+   ndarray-specific methods on it.</li>
+</ul>
+<p>You shouldn't ever need <code>.values</code> anymore.</p>
+<h2>Possible Future Paths</h2>
+<p>Extension Arrays open up quite a few exciting opportunities. Currently, pandas
+represents string data using Python objects in a NumPy array, which is slow.
+Libraries like <a href="https://arrow.apache.org">Apache Arrow</a> provide native support for variable-length
+strings, and the <a href="https://github.com/xhochy/fletcher">Fletcher</a> library provides pandas extension arrays
+for Arrow arrays. Pandas (or third-party libraries) will be able to support
+nested data, geo data, GPU arrays. Keep an eye on the <a href="http://pandas.pydata.org/pandas-docs/stable/ecosystem.html#extension-data-types">pandas ecosystem</a>
+page, which will keep track of third-party extension arrays. It's an exciting
+time for pandas development.</p>
+<h2>Other Thoughts</h2>
+<p>I'd like to emphasize that this is an <em>interface</em>, and not a concrete array
+implementation. We are <em>not</em> reimplementing NumPy here in pandas. Rather, this
+is a way to take any array-like data structure (one or more NumPy arrays, an
+Apache Arrow array, a CuPy array) and place it inside a DataFrame. I think
+getting pandas out of the array business, and instead thinking about
+higher-level tabular data things, is a healthy development for the project.</p>
+<p>This works perfectly with NumPy's <a href="https://docs.scipy.org/doc/numpy-1.13.0/neps/ufunc-overrides.html"><code>__array_ufunc__</code></a> protocol and
+<a href="https://www.numpy.org/neps/nep-0018-array-function-protocol.html">NEP-18</a>. You'll be able to use the familiar NumPy API on objects that
+aren't backed by NumPy memory.</p>
+<h2>Upgrade</h2>
+<p>These new goodies are all available in the recently released pandas 0.24.</p>
+<p>conda:</p>
+<div class="highlight"><pre><span></span>conda install -c conda-forge pandas
+</pre></div>
+
+
+<p>pip:</p>
+<div class="highlight"><pre><span></span>pip install --upgrade pandas
+</pre></div>
+
+
+<p>As always, we're happy to hear feedback on the <a href="https://mail.python.org/mailman/listinfo/pandas-dev">mailing list</a>,
+<a href="https://twitter.com/pandas_dev">@pandas-dev</a>, or <a href="https://github.com/pandas-dev/pandas/issues">issue tracker</a>.</p>
+<p>Thanks to the many contributors, maintainers, and <a href="https://github.com/pandas-dev/pandas-governance/blob/master/people.md">institutional
+partners</a> involved in the pandas community.</p>
   </div>
 
 </article>
