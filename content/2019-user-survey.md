@@ -17,7 +17,7 @@ table {
 </style>
 
 
-Pandas recently contucted a user survey to help guide future development.
+Pandas recently conducted a user survey to help guide future development.
 Thanks to everyone who participated! This post presents the high-level results.
 
 This analysis and the raw data can be found [on GitHub](https://github.com/pandas-dev/pandas-user-surveys) and run on Binder
