@@ -1,5 +1,5 @@
 Title: pandas 1.0
-Date: 2020-01-28
+Date: 2020-01-29
 
 Today pandas celebrates its 1.0.0 release. In many ways this is just a normal release with a host of new features, performance improvements, and bug fixes, which are documented in our [release notes](https://pandas.pydata.org/pandas-docs/version/1.0.0/whatsnew/v1.0.0.html). But it’s also something a bit more — a milestone for the project beyond just the commits. We wanted to take some time to reflect on where we've been and where we're going.
 
