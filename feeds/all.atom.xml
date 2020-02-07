@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>pandas blog</title><link href="https://blog.pandas.io/" rel="alternate"></link><link href="https://blog.pandas.io/feeds/all.atom.xml" rel="self"></link><id>https://blog.pandas.io/</id><updated>2020-01-29T00:00:00-06:00</updated><entry><title>pandas 1.0</title><link href="https://blog.pandas.io/pandas-10.html" rel="alternate"></link><published>2020-01-29T00:00:00-06:00</published><updated>2020-01-29T00:00:00-06:00</updated><author><name>Pandas Development Team</name></author><id>tag:blog.pandas.io,2020-01-29:/pandas-10.html</id><summary type="html">&lt;p&gt;Today pandas celebrates its 1.0.0 release. In many ways this is just a normal release with a host of new features, performance improvements, and bug fixes, which are documented in our &lt;a href="https://pandas.pydata.org/pandas-docs/version/1.0.0/whatsnew/v1.0.0.html"&gt;release notes&lt;/a&gt;. But it’s also something a bit more — a milestone for the project beyond just …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Today pandas celebrates its 1.0.0 release. In many ways this is just a normal release with a host of new features, performance improvements, and bug fixes, which are documented in our &lt;a href="https://pandas.pydata.org/pandas-docs/version/1.0.0/whatsnew/v1.0.0.html"&gt;release notes&lt;/a&gt;. But it’s also something a bit more — a milestone for the project beyond just the commits. We wanted to take some time to reflect on where we've been and where we're going.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>pandas blog</title><link href="https://dev.pandas.io/pandas-blog/" rel="alternate"></link><link href="https://dev.pandas.io/pandas-blog/feeds/all.atom.xml" rel="self"></link><id>https://dev.pandas.io/pandas-blog/</id><updated>2020-01-29T00:00:00-06:00</updated><entry><title>pandas 1.0</title><link href="https://dev.pandas.io/pandas-blog/pandas-10.html" rel="alternate"></link><published>2020-01-29T00:00:00-06:00</published><updated>2020-01-29T00:00:00-06:00</updated><author><name>Pandas Development Team</name></author><id>tag:dev.pandas.io,2020-01-29:/pandas-blog/pandas-10.html</id><summary type="html">&lt;p&gt;Today pandas celebrates its 1.0.0 release. In many ways this is just a normal release with a host of new features, performance improvements, and bug fixes, which are documented in our &lt;a href="https://pandas.pydata.org/pandas-docs/version/1.0.0/whatsnew/v1.0.0.html"&gt;release notes&lt;/a&gt;. But it’s also something a bit more — a milestone for the project beyond just …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Today pandas celebrates its 1.0.0 release. In many ways this is just a normal release with a host of new features, performance improvements, and bug fixes, which are documented in our &lt;a href="https://pandas.pydata.org/pandas-docs/version/1.0.0/whatsnew/v1.0.0.html"&gt;release notes&lt;/a&gt;. But it’s also something a bit more — a milestone for the project beyond just the commits. We wanted to take some time to reflect on where we've been and where we're going.&lt;/p&gt;
 &lt;h2&gt;Reflections&lt;/h2&gt;
 &lt;p&gt;The world of scientific Python has changed a lot since pandas was started.  In 2011, &lt;a href="https://wesmckinney.com/blog/a-roadmap-for-rich-scientific-data-structures-in-python/"&gt;the ecosystem was fragmented&lt;/a&gt;: a standard &lt;em&gt;rich&lt;/em&gt; data structure for statistics and data science had yet to emerge. This echos a similar story for NumPy, which consolidated array efforts that were &lt;a href="https://numpy.org/old_array_packages.html"&gt;previously fragmented&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Over the subsequent years, pandas emerged as a &lt;em&gt;de facto&lt;/em&gt; standard. It’s used by data scientists and analysts and as a data structure for other libraries to build on top of. StackOverflow &lt;a href="https://stackoverflow.blog/2017/09/14/python-growing-quickly/"&gt;cited pandas&lt;/a&gt; as one of the reasons for Python being the fastest growing major programming language.&lt;/p&gt;
@@ -13,7 +13,7 @@ We're &lt;a href="https://datapythonista.me/blog/dataframe-summit-at-euroscipy.h
 &lt;h1&gt;Going Forward&lt;/h1&gt;
 &lt;p&gt;Our &lt;a href="https://pandas.pydata.org/pandas-docs/version/1.0.0/development/roadmap.html"&gt;roadmap&lt;/a&gt; contains an up-to-date listing of where we see the project heading over the next few years.
 Needless to say, there's still plenty to do.&lt;/p&gt;
-&lt;p&gt;Check out the &lt;a href="https://pandas.pydata.org/pandas-docs/version/1.0.0/whatsnew/v1.0.0.html"&gt;release notes&lt;/a&gt; and visit the &lt;a href="https://pandas.pydata.org/pandas-docs/version/1.0.0/getting_started/install.html"&gt;installation page&lt;/a&gt; for instructions on updating to pandas 1.0.&lt;/p&gt;</content><category term="misc"></category></entry><entry><title>2019 Pandas User Survey</title><link href="https://blog.pandas.io/2019-pandas-user-survey.html" rel="alternate"></link><published>2019-08-22T00:00:00-05:00</published><updated>2019-08-22T00:00:00-05:00</updated><author><name>Pandas Development Team</name></author><id>tag:blog.pandas.io,2019-08-22:/2019-pandas-user-survey.html</id><summary type="html">&lt;style type="text/css"&gt;
+&lt;p&gt;Check out the &lt;a href="https://pandas.pydata.org/pandas-docs/version/1.0.0/whatsnew/v1.0.0.html"&gt;release notes&lt;/a&gt; and visit the &lt;a href="https://pandas.pydata.org/pandas-docs/version/1.0.0/getting_started/install.html"&gt;installation page&lt;/a&gt; for instructions on updating to pandas 1.0.&lt;/p&gt;</content><category term="misc"></category></entry><entry><title>2019 Pandas User Survey</title><link href="https://dev.pandas.io/pandas-blog/2019-pandas-user-survey.html" rel="alternate"></link><published>2019-08-22T00:00:00-05:00</published><updated>2019-08-22T00:00:00-05:00</updated><author><name>Pandas Development Team</name></author><id>tag:dev.pandas.io,2019-08-22:/pandas-blog/2019-pandas-user-survey.html</id><summary type="html">&lt;style type="text/css"&gt;
 table td {
     background: none;
 }
@@ -52,8 +52,8 @@ Thanks to everyone who participated! This post presents the high-level results.&
 &lt;p&gt;We had about 1250 repsonses over the 15 days we ran the survey in the summer of 2019.&lt;/p&gt;
 &lt;h1&gt;About the Respondents&lt;/h1&gt;
 &lt;p&gt;There was a fair amount of representation across pandas experience and frequeny of use, though the majority of respondents are on the more experienced side.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="png" src="https://blog.pandas.io/images/2019_files/2019_4_0.png"&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img alt="png" src="https://blog.pandas.io/images/2019_files/2019_5_0.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="png" src="https://dev.pandas.io/pandas-blog/images/2019_files/2019_4_0.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="png" src="https://dev.pandas.io/pandas-blog/images/2019_files/2019_5_0.png"&gt;&lt;/p&gt;
 &lt;p&gt;We included a few questions that were also asked in the &lt;a href="https://www.jetbrains.com/research/python-developers-survey-2018/"&gt;Python Developers Survey&lt;/a&gt; so we could compare Pandas' population to Python's. &lt;/p&gt;
 &lt;p&gt;90% of our respondents use Python as a primary language (compared with 84% from the PSF survey).&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;Yes    90.67%&lt;/span&gt;
@@ -71,7 +71,7 @@ Thanks to everyone who participated! This post presents the high-level results.&
 
 
 &lt;p&gt;For environment isolation, &lt;a href="https://conda.io/en/latest/"&gt;conda&lt;/a&gt; was the most popular.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="png" src="https://blog.pandas.io/images/2019_files/2019_13_0.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="png" src="https://dev.pandas.io/pandas-blog/images/2019_files/2019_13_0.png"&gt;&lt;/p&gt;
 &lt;p&gt;Most repondents are Python 3 only.&lt;/p&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;3        92.39%&lt;/span&gt;
 &lt;span class="err"&gt;2 &amp;amp; 3     6.80%&lt;/span&gt;
@@ -83,20 +83,20 @@ Thanks to everyone who participated! This post presents the high-level results.&
 &lt;h2&gt;Pandas APIs&lt;/h2&gt;
 &lt;p&gt;It can be hard for open source projects to know what features are actually used. We asked a few questions to get an idea.&lt;/p&gt;
 &lt;p&gt;CSV and Excel are (for better or worse) the most popular formats.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="png" src="https://blog.pandas.io/images/2019_files/2019_18_0.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="png" src="https://dev.pandas.io/pandas-blog/images/2019_files/2019_18_0.png"&gt;&lt;/p&gt;
 &lt;p&gt;In preperation for a possible refactor of pandas internals, we wanted to get a sense for
 how common wide (100s of columns or more) DataFrames are.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="png" src="https://blog.pandas.io/images/2019_files/2019_20_0.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="png" src="https://dev.pandas.io/pandas-blog/images/2019_files/2019_20_0.png"&gt;&lt;/p&gt;
 &lt;p&gt;Pandas is slowly growing new exentension types. Categoricals are the most popular,
 and the nullable integer type is already almost as popular as datetime with timezone.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="png" src="https://blog.pandas.io/images/2019_files/2019_22_0.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="png" src="https://dev.pandas.io/pandas-blog/images/2019_files/2019_22_0.png"&gt;&lt;/p&gt;
 &lt;p&gt;More and better examples seem to be a high-priority development item.
 Pandas recently received a NumFOCUS grant to improve our documentation,
 which we're using to write tutorial-style documentation, which should help
 meet this need.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="png" src="https://blog.pandas.io/images/2019_files/2019_24_0.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="png" src="https://dev.pandas.io/pandas-blog/images/2019_files/2019_24_0.png"&gt;&lt;/p&gt;
 &lt;p&gt;We also asked about specific, commonly-requested features.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="png" src="https://blog.pandas.io/images/2019_files/2019_26_0.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="png" src="https://dev.pandas.io/pandas-blog/images/2019_files/2019_26_0.png"&gt;&lt;/p&gt;
 &lt;p&gt;Of these, the clear standout is "scaling" to large datasets. A couple observations:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Perhaps pandas' documentation should do a better job of promoting libraries that provide scalable dataframes (like &lt;a href="https://dask.org"&gt;Dask&lt;/a&gt;, &lt;a href="https://dask.org"&gt;vaex&lt;/a&gt;, and &lt;a href="https://modin.readthedocs.io/en/latest/"&gt;modin&lt;/a&gt;)&lt;/li&gt;
@@ -111,11 +111,11 @@ meet this need.&lt;/p&gt;
 
 
 &lt;p&gt;There's a perception (which is shared by many of the pandas maintainers) that the pandas API is too large. To measure that, we asked whether users thought that pandas' API was too large, too small, or just right.&lt;/p&gt;
-&lt;p&gt;&lt;img alt="png" src="https://blog.pandas.io/images/2019_files/2019_31_0.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="png" src="https://dev.pandas.io/pandas-blog/images/2019_files/2019_31_0.png"&gt;&lt;/p&gt;
 &lt;p&gt;Finally, we asked for an overall satisfaction with the library, from 1 (not very unsatisfied) to 5 (very satisfied).&lt;/p&gt;
-&lt;p&gt;&lt;img alt="png" src="https://blog.pandas.io/images/2019_files/2019_33_0.png"&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img alt="png" src="https://dev.pandas.io/pandas-blog/images/2019_files/2019_33_0.png"&gt;&lt;/p&gt;
 &lt;p&gt;Most people are very satisfied. The average response is 4.39. I look forward to tracking this number over time.&lt;/p&gt;
-&lt;p&gt;If you're analyzing the raw data, be sure to share the results with us &lt;a href="https://twitter.com/pandas_dev"&gt;@pandas_dev&lt;/a&gt;.&lt;/p&gt;</content><category term="misc"></category></entry><entry><title>Pandas Extension Arrays</title><link href="https://blog.pandas.io/pandas-extension-arrays.html" rel="alternate"></link><published>2019-01-04T00:00:00-06:00</published><updated>2019-01-04T00:00:00-06:00</updated><author><name>Pandas Development Team</name></author><id>tag:blog.pandas.io,2019-01-04:/pandas-extension-arrays.html</id><summary type="html">&lt;p&gt;Extensibility was a major theme in pandas development over the last couple of
+&lt;p&gt;If you're analyzing the raw data, be sure to share the results with us &lt;a href="https://twitter.com/pandas_dev"&gt;@pandas_dev&lt;/a&gt;.&lt;/p&gt;</content><category term="misc"></category></entry><entry><title>Pandas Extension Arrays</title><link href="https://dev.pandas.io/pandas-blog/pandas-extension-arrays.html" rel="alternate"></link><published>2019-01-04T00:00:00-06:00</published><updated>2019-01-04T00:00:00-06:00</updated><author><name>Pandas Development Team</name></author><id>tag:dev.pandas.io,2019-01-04:/pandas-blog/pandas-extension-arrays.html</id><summary type="html">&lt;p&gt;Extensibility was a major theme in pandas development over the last couple of
 releases. This post introduces the pandas extension array interface: the
 motivation behind it and how it might affect you as a pandas user. Finally, we
 look at how extension arrays may shape the future of pandas.&lt;/p&gt;
