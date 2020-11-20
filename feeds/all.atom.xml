@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>pandas blog</title><link href="https://dev.pandas.io/pandas-blog/" rel="alternate"></link><link href="https://dev.pandas.io/pandas-blog/feeds/all.atom.xml" rel="self"></link><id>https://dev.pandas.io/pandas-blog/</id><updated>2020-01-29T00:00:00-06:00</updated><entry><title>pandas 1.0</title><link href="https://dev.pandas.io/pandas-blog/pandas-10.html" rel="alternate"></link><published>2020-01-29T00:00:00-06:00</published><updated>2020-01-29T00:00:00-06:00</updated><author><name>Pandas Development Team</name></author><id>tag:dev.pandas.io,2020-01-29:/pandas-blog/pandas-10.html</id><summary type="html">&lt;p&gt;Today pandas celebrates its 1.0.0 release. In many ways this is just a normal release with a host of new features, performance improvements, and bug fixes, which are documented in our &lt;a href="https://pandas.pydata.org/pandas-docs/version/1.0.0/whatsnew/v1.0.0.html"&gt;release notes&lt;/a&gt;. But it’s also something a bit more — a milestone for the project beyond just …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Today pandas celebrates its 1.0.0 release. In many ways this is just a normal release with a host of new features, performance improvements, and bug fixes, which are documented in our &lt;a href="https://pandas.pydata.org/pandas-docs/version/1.0.0/whatsnew/v1.0.0.html"&gt;release notes&lt;/a&gt;. But it’s also something a bit more — a milestone for the project beyond just the commits. We wanted to take some time to reflect on where we've been and where we're going.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>pandas blog</title><link href="https://dev.pandas.io/pandas-blog/" rel="alternate"></link><link href="https://dev.pandas.io/pandas-blog/feeds/all.atom.xml" rel="self"></link><id>https://dev.pandas.io/pandas-blog/</id><updated>2020-11-19T00:00:00-06:00</updated><entry><title>Pandas receives CZI Funding</title><link href="https://dev.pandas.io/pandas-blog/pandas-receives-czi-funding.html" rel="alternate"></link><published>2020-11-19T00:00:00-06:00</published><updated>2020-11-19T00:00:00-06:00</updated><author><name>Pandas Development Team</name></author><id>tag:dev.pandas.io,2020-11-19:/pandas-blog/pandas-receives-czi-funding.html</id><summary type="html">&lt;p&gt;We're excited to share that pandas has received a grant from the Chan Zuckerberg Initiative's Essential Open Source Software for Science program. This grant will fund two work items:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;We've dedicate funding specifically to maintenace. pandas is a large and popular project, but has little time from maintainer's employers officially …&lt;/li&gt;&lt;/ol&gt;</summary><content type="html">&lt;p&gt;We're excited to share that pandas has received a grant from the Chan Zuckerberg Initiative's Essential Open Source Software for Science program. This grant will fund two work items:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;We've dedicate funding specifically to maintenace. pandas is a large and popular project, but has little time from maintainer's employers officially dedicated to work on pandas. We'll pay maintainers to do the work necessary to keep the pandas project and community humming along. We appreciate that the EOSS program explicitly includes maintenance as an item they're willing to support.&lt;/li&gt;
+&lt;li&gt;We'll continue to improve pandas' &lt;a href="https://pandas.pydata.org/docs/dev/development/roadmap.html#consistent-missing-value-handling"&gt;nullable data types&lt;/a&gt;. Recent releases included experimental nullable integer and boolean dtypes. These prototypes show a promising future, but many parts of the library need to be updated to work with nullable data types. With this funding we hope to implement nullable data types that are appropriate to be used by default for all operations in pandas.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;For more, read the &lt;a href="https://github.com/TomAugspurger/pandas-czi/blob/6c36c5a1dcb5d9996b5910c27d534be7612acb3f/proposal.md"&gt;full proposal&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Read more about the program and other projects funded in &lt;a href="https://chanzuckerberg.com/newsroom/czi-awards-4-7-million-for-open-source-software-and-organizations-advancing-open-science/"&gt;the announcement&lt;/a&gt;.&lt;/p&gt;</content><category term="misc"></category></entry><entry><title>pandas 1.0</title><link href="https://dev.pandas.io/pandas-blog/pandas-10.html" rel="alternate"></link><published>2020-01-29T00:00:00-06:00</published><updated>2020-01-29T00:00:00-06:00</updated><author><name>Pandas Development Team</name></author><id>tag:dev.pandas.io,2020-01-29:/pandas-blog/pandas-10.html</id><summary type="html">&lt;p&gt;Today pandas celebrates its 1.0.0 release. In many ways this is just a normal release with a host of new features, performance improvements, and bug fixes, which are documented in our &lt;a href="https://pandas.pydata.org/pandas-docs/version/1.0.0/whatsnew/v1.0.0.html"&gt;release notes&lt;/a&gt;. But it’s also something a bit more — a milestone for the project beyond just …&lt;/p&gt;</summary><content type="html">&lt;p&gt;Today pandas celebrates its 1.0.0 release. In many ways this is just a normal release with a host of new features, performance improvements, and bug fixes, which are documented in our &lt;a href="https://pandas.pydata.org/pandas-docs/version/1.0.0/whatsnew/v1.0.0.html"&gt;release notes&lt;/a&gt;. But it’s also something a bit more — a milestone for the project beyond just the commits. We wanted to take some time to reflect on where we've been and where we're going.&lt;/p&gt;
 &lt;h2&gt;Reflections&lt;/h2&gt;
 &lt;p&gt;The world of scientific Python has changed a lot since pandas was started.  In 2011, &lt;a href="https://wesmckinney.com/blog/a-roadmap-for-rich-scientific-data-structures-in-python/"&gt;the ecosystem was fragmented&lt;/a&gt;: a standard &lt;em&gt;rich&lt;/em&gt; data structure for statistics and data science had yet to emerge. This echos a similar story for NumPy, which consolidated array efforts that were &lt;a href="https://numpy.org/old_array_packages.html"&gt;previously fragmented&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Over the subsequent years, pandas emerged as a &lt;em&gt;de facto&lt;/em&gt; standard. It’s used by data scientists and analysts and as a data structure for other libraries to build on top of. StackOverflow &lt;a href="https://stackoverflow.blog/2017/09/14/python-growing-quickly/"&gt;cited pandas&lt;/a&gt; as one of the reasons for Python being the fastest growing major programming language.&lt;/p&gt;
@@ -56,29 +64,26 @@ Thanks to everyone who participated! This post presents the high-level results.&
 &lt;p&gt;&lt;img alt="png" src="https://dev.pandas.io/pandas-blog/images/2019_files/2019_5_0.png"&gt;&lt;/p&gt;
 &lt;p&gt;We included a few questions that were also asked in the &lt;a href="https://www.jetbrains.com/research/python-developers-survey-2018/"&gt;Python Developers Survey&lt;/a&gt; so we could compare Pandas' population to Python's. &lt;/p&gt;
 &lt;p&gt;90% of our respondents use Python as a primary language (compared with 84% from the PSF survey).&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;Yes    90.67%&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;Yes    90.67%&lt;/span&gt;
 &lt;span class="err"&gt;No      9.33%&lt;/span&gt;
 &lt;span class="c"&gt;Name: Is Python your main language?, dtype: object&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;Windows users are well represented (see &lt;a href="https://www.youtube.com/watch?v=uoI57uMdDD4"&gt;Steve Dower's talk&lt;/a&gt; on this topic).&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;Linux      61.57%&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;Linux      61.57%&lt;/span&gt;
 &lt;span class="err"&gt;Windows    60.21%&lt;/span&gt;
 &lt;span class="err"&gt;MacOS      42.75%&lt;/span&gt;
 &lt;span class="c"&gt;Name: What Operating Systems do you use?, dtype: object&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;For environment isolation, &lt;a href="https://conda.io/en/latest/"&gt;conda&lt;/a&gt; was the most popular.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="png" src="https://dev.pandas.io/pandas-blog/images/2019_files/2019_13_0.png"&gt;&lt;/p&gt;
 &lt;p&gt;Most repondents are Python 3 only.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;3        92.39%&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;3        92.39%&lt;/span&gt;
 &lt;span class="err"&gt;2 &amp;amp; 3     6.80%&lt;/span&gt;
 &lt;span class="err"&gt;2         0.81%&lt;/span&gt;
 &lt;span class="c"&gt;Name: Python 2 or 3?, dtype: object&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;h2&gt;Pandas APIs&lt;/h2&gt;
 &lt;p&gt;It can be hard for open source projects to know what features are actually used. We asked a few questions to get an idea.&lt;/p&gt;
@@ -104,11 +109,10 @@ meet this need.&lt;/p&gt;
 &lt;/ol&gt;
 &lt;p&gt;After that, the next-most critical improvement is integer missing values. Those were actually added in &lt;a href="https://pandas.pydata.org/pandas-docs/stable/whatsnew/v0.24.0.html#optional-integer-na-support"&gt;Pandas 0.24&lt;/a&gt;, but they're not the default, and there's still some incompatibilites with the rest of pandas API.&lt;/p&gt;
 &lt;p&gt;Pandas is a less conservative library than, say, NumPy. We're approaching 1.0, but on the way we've made many deprecations and some outright API breaking changes. Fortunately, most people are OK with the tradeoff.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;Yes    94.89%&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;Yes    94.89%&lt;/span&gt;
 &lt;span class="err"&gt;No      5.11%&lt;/span&gt;
 &lt;span class="c"&gt;Name: Is Pandas stable enough for you?, dtype: object&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;There's a perception (which is shared by many of the pandas maintainers) that the pandas API is too large. To measure that, we asked whether users thought that pandas' API was too large, too small, or just right.&lt;/p&gt;
 &lt;p&gt;&lt;img alt="png" src="https://dev.pandas.io/pandas-blog/images/2019_files/2019_31_0.png"&gt;&lt;/p&gt;
@@ -163,7 +167,7 @@ cast to object dtype).&lt;/p&gt;
 &lt;p&gt;Additionally, we'll be able to add &lt;em&gt;new&lt;/em&gt; extension arrays with relative ease.
 For example, 0.24.0 (optionally) solved one of pandas longest-standing pain
 points: missing values casting integer-dtype values to float.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;int_ser&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Series&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;int_ser&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Series&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;int_ser&lt;/span&gt;
 &lt;span class="mi"&gt;0&lt;/span&gt;    &lt;span class="mi"&gt;1&lt;/span&gt;
 &lt;span class="mi"&gt;2&lt;/span&gt;    &lt;span class="mi"&gt;2&lt;/span&gt;
@@ -174,12 +178,11 @@ points: missing values casting integer-dtype values to float.&lt;/p&gt;
 &lt;span class="mi"&gt;1&lt;/span&gt;    &lt;span class="n"&gt;NaN&lt;/span&gt;
 &lt;span class="mi"&gt;2&lt;/span&gt;    &lt;span class="mf"&gt;2.0&lt;/span&gt;
 &lt;span class="n"&gt;dtype&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;float64&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;With the new &lt;a href="http://pandas.pydata.org/pandas-docs/version/0.24/reference/api/pandas.arrays.IntegerArray.html"&gt;IntegerArray&lt;/a&gt; and nullable integer dtypes, we can
 natively represent integer data with missing values.&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;int_ser&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Series&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;dtype&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Int64Dtype&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;int_ser&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Series&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;index&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;dtype&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Int64Dtype&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;int_ser&lt;/span&gt;
 &lt;span class="mi"&gt;0&lt;/span&gt;    &lt;span class="mi"&gt;1&lt;/span&gt;
 &lt;span class="mi"&gt;2&lt;/span&gt;    &lt;span class="mi"&gt;2&lt;/span&gt;
@@ -190,8 +193,7 @@ natively represent integer data with missing values.&lt;/p&gt;
 &lt;span class="mi"&gt;1&lt;/span&gt;    &lt;span class="n"&gt;NaN&lt;/span&gt;
 &lt;span class="mi"&gt;2&lt;/span&gt;      &lt;span class="mi"&gt;2&lt;/span&gt;
 &lt;span class="n"&gt;dtype&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;Int64&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;One thing it does slightly change how you should access the raw (unlabeled)
 arrays stored inside a Series or Index, which is occasionally useful. Perhaps
@@ -209,7 +211,7 @@ those exceptions.&lt;/p&gt;
 &lt;p&gt;As we saw above, the "array" backing a Series or Index might not be a NumPy
 array, it may instead be an extension array (from pandas or a third-party
 library). For example, consider &lt;code&gt;Categorical&lt;/code&gt;,&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;cat&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Categorical&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;categories&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;cat&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Categorical&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;categories&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;c&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;ser&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;pd&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;Series&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cat&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;ser&lt;/span&gt;
 &lt;span class="mi"&gt;0&lt;/span&gt;    &lt;span class="n"&gt;a&lt;/span&gt;
@@ -221,8 +223,7 @@ library). For example, consider &lt;code&gt;Categorical&lt;/code&gt;,&lt;/p&gt;
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;ser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;values&lt;/span&gt;
 &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="n"&gt;Categories&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;object&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;In this case &lt;code&gt;.values&lt;/code&gt; is a Categorical, not a NumPy array. For period-dtype
 data, &lt;code&gt;.values&lt;/code&gt; returns a NumPy array of &lt;code&gt;Period&lt;/code&gt; objects, which is expensive to
@@ -238,14 +239,13 @@ array. But the entire point of an extension array is for representing data NumPy
    data.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;So with our Categorical example,&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;ser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;ser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;array&lt;/span&gt;
 &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 &lt;span class="n"&gt;Categories&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;object&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
 
 &lt;span class="o"&gt;&amp;gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class="n"&gt;ser&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;to_numpy&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
 &lt;span class="n"&gt;array&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;b&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="n"&gt;dtype&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="nb"&gt;object&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;To summarize:&lt;/p&gt;
 &lt;ul&gt;
@@ -278,14 +278,12 @@ aren't backed by NumPy memory.&lt;/p&gt;
 &lt;h2&gt;Upgrade&lt;/h2&gt;
 &lt;p&gt;These new goodies are all available in the recently released pandas 0.24.&lt;/p&gt;
 &lt;p&gt;conda:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;conda install -c conda-forge pandas&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;conda install -c conda-forge pandas&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;pip:&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="err"&gt;pip install --upgrade pandas&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;code&gt;&lt;span class="err"&gt;pip install --upgrade pandas&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 
 &lt;p&gt;As always, we're happy to hear feedback on the &lt;a href="https://mail.python.org/mailman/listinfo/pandas-dev"&gt;mailing list&lt;/a&gt;,
 &lt;a href="https://twitter.com/pandas_dev"&gt;@pandas-dev&lt;/a&gt;, or &lt;a href="https://github.com/pandas-dev/pandas/issues"&gt;issue tracker&lt;/a&gt;.&lt;/p&gt;

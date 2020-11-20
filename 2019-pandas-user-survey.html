@@ -76,29 +76,26 @@ Thanks to everyone who participated! This post presents the high-level results.<
 <p><img alt="png" src="./images/2019_files/2019_5_0.png"></p>
 <p>We included a few questions that were also asked in the <a href="https://www.jetbrains.com/research/python-developers-survey-2018/">Python Developers Survey</a> so we could compare Pandas' population to Python's. </p>
 <p>90% of our respondents use Python as a primary language (compared with 84% from the PSF survey).</p>
-<div class="highlight"><pre><span></span><span class="err">Yes    90.67%</span>
+<div class="highlight"><pre><span></span><code><span class="err">Yes    90.67%</span>
 <span class="err">No      9.33%</span>
 <span class="c">Name: Is Python your main language?, dtype: object</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>Windows users are well represented (see <a href="https://www.youtube.com/watch?v=uoI57uMdDD4">Steve Dower's talk</a> on this topic).</p>
-<div class="highlight"><pre><span></span><span class="err">Linux      61.57%</span>
+<div class="highlight"><pre><span></span><code><span class="err">Linux      61.57%</span>
 <span class="err">Windows    60.21%</span>
 <span class="err">MacOS      42.75%</span>
 <span class="c">Name: What Operating Systems do you use?, dtype: object</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>For environment isolation, <a href="https://conda.io/en/latest/">conda</a> was the most popular.</p>
 <p><img alt="png" src="./images/2019_files/2019_13_0.png"></p>
 <p>Most repondents are Python 3 only.</p>
-<div class="highlight"><pre><span></span><span class="err">3        92.39%</span>
+<div class="highlight"><pre><span></span><code><span class="err">3        92.39%</span>
 <span class="err">2 &amp; 3     6.80%</span>
 <span class="err">2         0.81%</span>
 <span class="c">Name: Python 2 or 3?, dtype: object</span>
-</pre></div>
-
+</code></pre></div>
 
 <h2>Pandas APIs</h2>
 <p>It can be hard for open source projects to know what features are actually used. We asked a few questions to get an idea.</p>
@@ -124,11 +121,10 @@ meet this need.</p>
 </ol>
 <p>After that, the next-most critical improvement is integer missing values. Those were actually added in <a href="https://pandas.pydata.org/pandas-docs/stable/whatsnew/v0.24.0.html#optional-integer-na-support">Pandas 0.24</a>, but they're not the default, and there's still some incompatibilites with the rest of pandas API.</p>
 <p>Pandas is a less conservative library than, say, NumPy. We're approaching 1.0, but on the way we've made many deprecations and some outright API breaking changes. Fortunately, most people are OK with the tradeoff.</p>
-<div class="highlight"><pre><span></span><span class="err">Yes    94.89%</span>
+<div class="highlight"><pre><span></span><code><span class="err">Yes    94.89%</span>
 <span class="err">No      5.11%</span>
 <span class="c">Name: Is Pandas stable enough for you?, dtype: object</span>
-</pre></div>
-
+</code></pre></div>
 
 <p>There's a perception (which is shared by many of the pandas maintainers) that the pandas API is too large. To measure that, we asked whether users thought that pandas' API was too large, too small, or just right.</p>
 <p><img alt="png" src="./images/2019_files/2019_31_0.png"></p>
