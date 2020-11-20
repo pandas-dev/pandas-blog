@@ -1,4 +1,4 @@
-Title: Pandas wins CZI Award
+Title: Pandas receives CZI Funding
 Date: 2020-11-19
 
 We're excited to share that pandas has won a grant from the Chan Zuckerberg Initiative's Essential Open Source Software for Science program. This award will fund two work items:
