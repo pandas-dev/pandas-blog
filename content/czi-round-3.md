@@ -1,7 +1,7 @@
 Title: Pandas wins CZI Award
 Date: 2020-11-19
 
-We're excited to share that pandas has won a grant from the Chan Zuckerberg Initiative's Essential Open Source Software for Science. This award will fund two work items:
+We're excited to share that pandas has won a grant from the Chan Zuckerberg Initiative's Essential Open Source Software for Science program. This award will fund two work items:
 
 1. We've dedicate funding specifically to maintenace. pandas is a large and popular project, but has little time from maintainer's employers officially dedicated work on pandas. We'll pay maintainers to do the work necessary to keep the pandas project and community humming along. We appreciate that the EOSS program explicitly includes maintenance as an item they're willing to support.
 2. We'll continue to improve pandas' nullable data types. Recent releases included experimental nullable integer and boolean dtypes. These prototypes show a promising future, but many parts of the library need to be updated to work with nullable data types. With this funding we hope to implement nullable data types that are appropriate to be used by default for all operations in pandas.
