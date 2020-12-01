@@ -3,3 +3,4 @@ output
 pelican-hss
 pelican-themes
 *.pyc
+venv/
